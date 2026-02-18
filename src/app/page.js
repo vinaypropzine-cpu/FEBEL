@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, Globe, Moon, Sun, Terminal } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from "next/image";
+
 
 const AnimatedString = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 dark:opacity-20">
@@ -103,14 +105,13 @@ const StartupHero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative aspect-square bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-950 dark:to-purple-950 rounded-3xl overflow-hidden border border-white dark:border-slate-800 shadow-2xl flex items-center justify-center"
           >
-            <div className="text-center p-12">
-              <div className="w-64 h-64 bg-white/40 dark:bg-indigo-500/10 backdrop-blur-xl rounded-full absolute -top-10 -right-10 animate-pulse"></div>
-              <div className="w-32 h-32 bg-indigo-200/50 dark:bg-indigo-500/20 rounded-full absolute bottom-10 left-10 blur-2xl"></div>
-              <div className="relative z-10 space-y-4">
-                <div className="text-8xl">🌐</div>
-                <p className="font-mono text-xs text-indigo-400 font-bold uppercase tracking-widest">Decentralized Infrastructure</p>
-              </div>
-            </div>
+            <Image
+              src="/hero.png"
+              alt="Hero Illustration"
+              fill
+              className="object-cover"
+            />
+
           </motion.div>
         </div>
       </main>
@@ -422,7 +423,7 @@ const CommunitySection = () => {
 
             <div className="flex flex-wrap gap-6">
               <a
-                href="https://discord.gg/your-link"
+                href="https://discord.gg/z4m2eAJN"
                 target="_blank"
                 className="bg-white text-indigo-600 px-10 py-5 rounded-2xl font-bold flex items-center gap-3 hover:bg-indigo-50 transition-all shadow-xl shadow-indigo-900/20 group/link"
               >
@@ -563,7 +564,7 @@ const Footer = () => {
     <footer className="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-16">
-          
+
           {/* Brand Column */}
           <div className="col-span-2 space-y-6">
             <div className="text-3xl font-black tracking-tighter text-indigo-600 dark:text-indigo-400">
