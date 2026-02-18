@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
+/* This is the key for Tailwind v4 to recognize the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0f172a; /* slate-900 */
+}
+
+/* Define what colors change when the .dark class is active */
+.dark {
+  --background: #020617; /* slate-950 */
+  --foreground: #f8fafc; /* slate-50 */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease;
 }
 
 @theme inline {
