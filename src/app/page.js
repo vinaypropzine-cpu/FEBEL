@@ -213,7 +213,7 @@ const EcosystemSection = () => {
       name: "Propzine",
       desc: "Decentralized listing and media for the real estate industry. Transparent, verified, and borderless.",
       tags: ["Real Estate", "Media"],
-      span: "md:col-span-2 md:row-span-2", // Larger Hero Tile
+      span: "md:col-span-1 md:row-span-1", // Larger Hero Tile
       color: "bg-blue-500/10 border-blue-500/20",
       image: "🏠" // Replace with <img src="/propzine.png" />
     },
@@ -229,7 +229,7 @@ const EcosystemSection = () => {
       name: "On-Chain Agreement",
       desc: "Trustless legal frameworks for builders and developers.",
       tags: ["LegalTech", "Builders"],
-      span: "md:col-span-1 md:row-span-2", // Vertical Tile
+      span: "md:col-span-1 md:row-span-1", // Vertical Tile
       color: "bg-purple-500/10 border-purple-500/20",
       image: "📜"
     },
@@ -237,7 +237,7 @@ const EcosystemSection = () => {
       name: "NFT Doc Verify",
       desc: "Instant document verification system using NFT-based identity.",
       tags: ["Identity", "Security"],
-      span: "md:col-span-2 md:row-span-",
+      span: "md:col-span-3 md:row-span-1",
       color: "bg-orange-500/10 border-orange-500/20",
       image: "🆔"
     },
