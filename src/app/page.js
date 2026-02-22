@@ -48,7 +48,7 @@ const StartupHero = () => {
   }, [isDark]);
 
   return (
-    <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900 overflow-x-hidden transition-colors duration-300">
+    <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900 overflow-xhidden transition-colors duration-300">
 
 
       {/* Navigation */}
