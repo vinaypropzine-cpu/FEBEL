@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, Globe, Moon, Sun, Terminal } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from "next/image";
+import Link from 'next/link'; // Add this line at the top
 
 
 const AnimatedString = () => (
@@ -47,7 +48,7 @@ const StartupHero = () => {
   }, [isDark]);
 
   return (
-    <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900 overflow-xhidden transition-colors duration-300">
+    <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900 overflow-x-hidden transition-colors duration-300">
 
 
       {/* Navigation */}
@@ -496,9 +497,13 @@ const FebelNews = () => {
           </h2>
           <h3 className="text-4xl font-bold">Latest from the journal</h3>
         </div>
-        <button className="hidden md:flex items-center gap-2 text-sm font-bold hover:text-indigo-600 transition-colors">
+        {/* Change this block in your FebelNews component */}
+        <Link
+          href="/blog"
+          className="hidden md:flex items-center gap-2 text-sm font-bold hover:text-indigo-600 transition-colors"
+        >
           View All Posts <ChevronRight size={16} />
-        </button>
+        </Link>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8">
@@ -538,9 +543,12 @@ const FebelNews = () => {
       </div>
 
       {/* Mobile-only View All Button */}
-      <button className="md:hidden w-full mt-10 py-4 border-2 border-slate-200 dark:border-slate-800 rounded-xl font-bold">
+      <Link
+        href="/blog"
+        className="md:hidden w-full mt-10 py-4 border-2 border-slate-200 dark:border-slate-800 rounded-xl font-bold flex items-center justify-center"
+      >
         View All Posts
-      </button>
+      </Link>
     </section>
   );
 };
